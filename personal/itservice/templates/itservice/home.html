@@ -731,52 +731,70 @@
             <h2 class="section-title">Our Services</h2>
             <p class="section-subtitle">We provide comprehensive IT solutions tailored to your business needs</p>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-globe"></i>
+                <a href="{% url 'service_detail' service_slug='web-development' %}" class="service-card-link">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Modern, responsive websites that captivate your audience and drive conversions with the latest technologies.</p>
                     </div>
-                    <h3>Web Development</h3>
-                    <p>Modern, responsive websites that captivate your audience and drive conversions with the latest technologies.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
+                </a>
+                <a href="{% url 'service_detail' service_slug='digital-marketing' %}" class="service-card-link">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Digital Marketing</h3>
+                        <p>Strategic digital marketing campaigns that boost your online presence and generate quality leads.</p>
                     </div>
-                    <h3>Digital Marketing</h3>
-                    <p>Strategic digital marketing campaigns that boost your online presence and generate quality leads.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                </a>
+                <a href="{% url 'service_detail' service_slug='mobile-apps' %}" class="service-card-link">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Apps</h3>
+                        <p>Native and cross-platform mobile applications that engage users and grow your business.</p>
                     </div>
-                    <h3>Mobile Apps</h3>
-                    <p>Native and cross-platform mobile applications that engage users and grow your business.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
+                </a>
+                <a href="{% url 'service_detail' service_slug='cloud-solutions' %}" class="service-card-link">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud Solutions</h3>
+                        <p>Scalable cloud infrastructure and migration services for optimal performance and cost-efficiency.</p>
                     </div>
-                    <h3>Cloud Solutions</h3>
-                    <p>Scalable cloud infrastructure and migration services for optimal performance and cost-efficiency.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
+                </a>
+                <a href="{% url 'service_detail' service_slug='cybersecurity' %}" class="service-card-link">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Cybersecurity</h3>
+                        <p>Comprehensive security solutions to protect your digital assets and maintain business continuity.</p>
                     </div>
-                    <h3>Cybersecurity</h3>
-                    <p>Comprehensive security solutions to protect your digital assets and maintain business continuity.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
+                </a>
+                <a href="{% url 'service_detail' service_slug='it-consulting' %}" class="service-card-link">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>IT Consulting</h3>
+                        <p>Expert guidance and strategic planning to optimize your technology infrastructure and processes.</p>
                     </div>
-                    <h3>IT Consulting</h3>
-                    <p>Expert guidance and strategic planning to optimize your technology infrastructure and processes.</p>
-                </div>
+                </a>
             </div>
         </div>
     </section>
-
+    <style>
+        .service-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+    </style>
     <!-- About Section -->
     <section class="about fade-in" id="about">
         <div class="container">
