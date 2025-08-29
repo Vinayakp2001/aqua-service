@@ -110,5 +110,4 @@ The frontend design is inspired by `growlect.com`, focusing on:
 After running the development server, navigate to `http://127.0.0.1:8000/` in your web browser to access the Aqua Services application.
 
 ## License
-[License Name or "MIT License" if you prefer, or remove this section if not applicable.]
 
