@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Services - About Us</title>
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="{% url 'home' %}" class="logo">AQUA</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'home' %}#services">Services</a></li>
+                <li><a href="{% url 'home' %}#about" class="active">About</a></li>
+                <li><a href="{% url 'home' %}#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Us Content -->
+    <section class="about-page-hero section-padding">
+        <div class="container">
+            <h1 class="section-title">About Aqua Services</h1>
+            <p class="section-subtitle">Leading the Digital Revolution with Innovative IT Solutions.</p>
+        </div>
+    </section>
+
+    <section class="about-us-content section-padding">
+        <div class="container">
+            <div class="about-content-grid">
+                <div class="about-text-block">
+                    <h3>Our Vision & Mission</h3>
+                    <p>At Aqua Services, we're passionate about transforming businesses through innovative technology solutions. Our team of expert developers, designers, and strategists work collaboratively to deliver exceptional results that exceed expectations.</p>
+                    <p>With years of experience in the industry, we understand the unique challenges businesses face in today's digital landscape. We combine creativity with technical expertise to create solutions that not only look great but also drive real business growth.</p>
+                </div>
+                <div class="about-image-block">
+                    <img src="{% static 'images/about-us-main.jpg' %}" alt="About Us" class="img-fluid">
+                </div>
+            </div>
+            <div class="about-stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">250+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support Available</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="{% url 'home' %}" class="footer-logo">AQUA</a>
+            <p class="footer-description">Transformative digital experiences that inspire growth.</p>
+            
+            <div class="footer-inquiry">
+                <input type="email" placeholder="Enter your email address">
+                <button>Submit your inquiry now</button>
+            </div>
+
+            <div class="footer-links">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'home' %}#services">Services</a>
+                <a href="{% url 'home' %}#about" class="active">About</a>
+                <a href="{% url 'home' %}#contact">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="copyright">© 2025 Aqua Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
