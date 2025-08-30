@@ -76,9 +76,11 @@
             <h2 class="section-title">Digital Marketing Solutions</h2>
             <p class="section-subtitle">We provide comprehensive IT solutions tailored to your business needs</p>
             <div class="services-grid">
-                {% for slug, service in services %}
-                <a href="{% url 'service_detail' service_slug=slug %}" class="service-card">
-                    <img src="{% static service.image %}" alt="{{ service.title }} Image" class="service-card-image">
+                {% for service in services %}
+                <a href="{% url 'service_detail' service_slug=service.slug %}" class="service-card">
+                    <div class="service-card-image-wrapper">
+                        <img src="{{ service.image.url }}" alt="{{ service.title }} Image" class="service-card-image" loading="lazy">
+                    </div>
                     <h6 class="service-category">Digital Marketing Solutions</h6> <!-- Dummy category for now -->
                     <h3>{{ service.title }}</h3>
                     <p>{{ service.description|truncatechars:100 }}</p>
@@ -98,7 +100,7 @@
             <p class="section-subtitle">Explore our successful digital marketing and web development projects.</p>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="{% static 'images/project-creative.jpg' %}" alt="Creative Solutions" class="img-fluid">
+                    <img src="{% static 'images/project-creative.jpg' %}" alt="Creative Solutions" class="img-fluid" loading="lazy">
                     <div class="project-info">
                         <h4 class="project-title">Creative Solutions</h4>
                         <p class="project-description">Innovative designs that drive engagement and conversions.</p>
@@ -106,23 +108,23 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="{% static 'images/project-marketing.jpg' %}" alt="Marketing Strategies" class="img-fluid">
+                    <img src="{% static 'images/project-marketing.jpg' %}" alt="Marketing Strategies" class="img-fluid" loading="lazy">
                     <div class="project-info">
                         <h4 class="project-title">Marketing Strategies</h4>
                         <p class="project-description">Result-driven campaigns tailored to your business goals.</p>
                         <a href="#" class="project-link">→</a>
-                    </div>
                 </div>
+                    </div>
                 <div class="project-card">
-                    <img src="{% static 'images/project-webdev.jpg' %}" alt="Web Development" class="img-fluid">
+                    <img src="{% static 'images/project-webdev.jpg' %}" alt="Web Development" class="img-fluid" loading="lazy">
                     <div class="project-info">
                         <h4 class="project-title">Web Development</h4>
                         <p class="project-description">Custom websites that enhance your online presence effectively.</p>
                         <a href="#" class="project-link">→</a>
                     </div>
-                </div>
+                    </div>
                 <div class="project-card">
-                    <img src="{% static 'images/project-digital.jpg' %}" alt="Digital Impact" class="img-fluid">
+                    <img src="{% static 'images/project-digital.jpg' %}" alt="Digital Impact" class="img-fluid" loading="lazy">
                     <div class="project-info">
                         <h4 class="project-title">Digital Impact</h4>
                         <p class="project-description">Transforming brands through powerful digital experiences and solutions.</p>
@@ -141,8 +143,8 @@
             <div class="cta-form-container">
                 <input type="email" placeholder="Enter your email address">
                 <button class="cta-button">Submit Your Inquiry Now</button>
-            </div>
-        </div>
+                    </div>
+                </div>
     </section>
 
     <!-- Solutions Section - Inspired by Growlect -->
